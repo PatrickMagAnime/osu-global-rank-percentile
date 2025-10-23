@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "osu! Rank Percentile & Playerbase Estimator",
+  "version": "0.4.1",
+  "description": "Schätzt die Gesamtspielerbasis aus Medaillen-Prozenten und zeigt deinen Prozentrang neben dem Global Ranking an.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://osu.ppy.sh/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://osu.ppy.sh/*"],
+      "js": ["content/shared.js", "content/medalCollector.js", "content/rankPercentile.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
